@@ -93,7 +93,11 @@ export default {
   methods: {
     handleClick: function (tab, event) {
       this.beforeLeave()
-      this.$router.replace({name: 'BlankForJump', params: {petIndex: parseInt(tab.name), uniqueId: this.uniqueId}})
+      this.$router.replace({
+        name: 'BlankForJump',
+        params: {
+          petIndex: parseInt(tab.name),
+          uniqueId: this.uniqueId}})
     },
     interactionButton: function (type) {
       this.taskBacklogCounter[this.petName]['total'] -= this.taskBacklogCounter[this.petName][type]
@@ -170,21 +174,22 @@ export default {
 </script>
 
 <style scoped>
-  /*.container {*/
-    /*position: releative;*/
-  /*}*/
+  .header {
+    line-height: 0px;
+  }
   .main {
-    bottom: 150px;
-    /* border: 1px solid; */
+    top: 0px;
+    bottom: 100px;
+    /*border: 1px solid;*/
   }
   .main-canvas {
-    /* border: 1px solid; */
-    background: url('../assets/home-inside-example.png') no-repeat;
+    /*border: 1px solid;*/
+    background: url('../assets/home-inside-example-2.png') no-repeat;
     position: absolute;
-    left: 10px;
-    right: 10px;
-    top: 50px;
-    bottom: 30px;
+    left: 0px;
+    right: 0px;
+    top: 40px;
+    bottom: 50px;
   }
   .happiness-block {
     margin-top: 10px;
@@ -195,15 +200,18 @@ export default {
     display: inline-block;
   }
   .discovery-block {
-    /* border: 1px solid; */
+     /*border: 1px solid;*/
     /*These two to make the discovery block the same line with the clock block*/
     display: inline-block;
     width: 70%;
     height: 100px;
     background: rgb(230, 184, 175);
-    background: rgba(230, 184, 175, 0.5);
+    background: rgba(230, 184, 175, 0.7);
     border-radius: 20px !important;
     margin: 10px;
+    font-weight: bold;
+    height: auto;
+    text-align: left;
   }
   .clock-block {
     margin-right: 10px;
@@ -211,13 +219,13 @@ export default {
     /* border: 1px solid; */
   }
   .animal-block {
-    /* border: 1px solid; */
+     /*border: 1px solid;*/
     /*background: url('../assets/cat.png') no-repeat;*/
     position: absolute;
-    left: 60px;
+    left: 90px;
     right: 60px;
     top: 150px;
-    bottom: 50px;
+    bottom: 0px;
   }
   .Frankie-happy {
     background: url('../assets/finalelemnet/frankie_happy.png') no-repeat;
@@ -256,7 +264,7 @@ export default {
     background: url('../assets/finalelemnet/max_angry.png') no-repeat;
   }
   .buttons-block {
-    /* border: 1px solid; */
+     /*border: 1px solid;*/
     /*This line + generate-report-block.line-height + generate-report-block.margin-bottom=.footer.line-height*/
     line-height:100px;
     /*display: flex + flex: 1 to evenly separate block into 3*/

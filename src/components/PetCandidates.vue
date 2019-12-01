@@ -4,7 +4,10 @@
     <div class="main">
       <div class="intro-block" v-for="item in petCandidates">
         <div class="picture-out">
-          <div class="picture-in"></div>
+          <div class="picture-in Frankie-icon" v-if="item.petName === 'Frankie'"></div>
+          <div class="picture-in Mikky-icon" v-if="item.petName === 'Mikky'"></div>
+          <div class="picture-in Cooper-icon" v-if="item.petName === 'Cooper'"></div>
+          <div class="picture-in Max-icon" v-if="item.petName === 'Max'"></div>
         </div>
         <div class="name">
           <h4 class="text">{{item.petName}}</h4>
@@ -68,8 +71,20 @@ export default {
     width: 100px;
     border-radius: 50%;
     /*border: 1px solid;*/
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+    /*background: url('../assets/dog-food-image-example.jpg') no-repeat center;*/
 
+  }
+  .Frankie-icon {
+    background: url('../assets/finalelemnet/frankie_icon.png') no-repeat center;
+  }
+  .Mikky-icon {
+    background: url('../assets/finalelemnet/mikky_icon.png') no-repeat center;
+  }
+  .Cooper-icon {
+    background: url('../assets/finalelemnet/cooper_icon.png') no-repeat center;
+  }
+  .Max-icon {
+    background: url('../assets/finalelemnet/max_icon.png') no-repeat center;
   }
   .name {
     /*border: 1px solid;*/
