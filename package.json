@@ -16,9 +16,11 @@
   "dependencies": {
     "axios": "^0.19.0",
     "element-ui": "^2.12.0",
+    "heroku": "^7.35.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-socket.io": "^3.0.7"
+    "vue-socket.io": "^3.0.7",
+    "webpack-dev-server": "^2.9.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
