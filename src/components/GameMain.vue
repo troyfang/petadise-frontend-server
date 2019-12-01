@@ -170,9 +170,9 @@ export default {
 </script>
 
 <style scoped>
-  .container {
-    position: releative;
-  }
+  /*.container {*/
+    /*position: releative;*/
+  /*}*/
   .main {
     bottom: 150px;
     /* border: 1px solid; */
@@ -211,10 +211,8 @@ export default {
     /* border: 1px solid; */
   }
   .animal-block {
-
     /* border: 1px solid; */
-    background: url('../assets/cat.png') no-repeat;
-
+    /*background: url('../assets/cat.png') no-repeat;*/
     position: absolute;
     left: 60px;
     right: 60px;
@@ -302,7 +300,6 @@ export default {
     height:150px;
   /*border: 1px solid;*/
   }
-
   #page-wraper {
     /* background: url(../images/page-bg.jpg) no-repeat center center fixed; */
     -webkit-background-size: cover;
@@ -311,7 +308,6 @@ export default {
     background-size: cover;
     width: 100%;
   }
-
   span.heart {
     color: #f26471;
     font-size: 23px;

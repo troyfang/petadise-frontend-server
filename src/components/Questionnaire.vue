@@ -108,6 +108,4 @@ export default {
     display: inline-grid;
     width: 80px;
   }
-
-
 </style>
