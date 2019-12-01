@@ -26,7 +26,7 @@
             v-model="report[petName]"
             disabled
             show-score
-            text-color="#a43f49" 
+            text-color="#a43f49"
           >
           </el-rate>
         </div>
@@ -64,7 +64,7 @@ export default {
 <style scoped>
   .tips-block {
     /*border: 1px solid;*/
-    color: #3B5257; 
+    color: #3B5257;
     display: inline-block;
     width: 95%;
     height: auto;
@@ -126,15 +126,12 @@ export default {
     margin: 0px;
     color: #a43f49;
   }
-  
   .more-info-icon {
     font-size: 30px;
   }
-
-    .el-icon-document {
+  .el-icon-document {
     color: #a43f49
   }
-
   /*.button-block {*/
     /*border: 1px solid;*/
     /*!*margin-top: 30px;*!*/
