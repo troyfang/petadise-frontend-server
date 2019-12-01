@@ -11,7 +11,7 @@ import AnalogClock from 'vue-analog-clock'
 
 Vue.use(new VueSocketio({
   debug: true,
-  connection: 'http://localhost:3000',
+  connection: 'https://petadise-test.herokuapp.com',
   vuex: {}
 }))
 
