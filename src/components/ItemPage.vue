@@ -200,7 +200,7 @@ export default {
     width: 155px;
     height: 155px;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     background-color: rgba(230, 184, 175, 0.4);
     /*width: 50%;*/
     /*height: 165px;*/
@@ -225,7 +225,7 @@ export default {
     width: 155px;
     height: 155px;
     float: left;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-top: 10px;
     background-color: rgba(230, 184, 175, 0.4);
     /*width: 50%;*/
