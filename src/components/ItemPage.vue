@@ -3,12 +3,12 @@
     <div class="header">PETADISE</div>
     <div class="main">
       <div class="tips-block">
-        <el-avatar class="avatar" shape="square" :size="100" :src="squareUrl"></el-avatar>
-        <p>tips: {{tips}}</p>
+        <!--<el-avatar class="avatar" shape="square" :size="100" :src="squareUrl"></el-avatar>-->
+        <p>Tips: {{tips}}</p>
       </div>
-      <div>
-        <p>🌸Pick the food for xx!🌸</p>
-      </div>
+      <!--<div>-->
+        <!--<p>🌸Pick the food for xx!🌸</p>-->
+      <!--</div>-->
       <div class="items-block">
         <div v-if="type === 'feed'">
           <div class="item-1 food-1" @click="chooseItem(1)"></div>
@@ -31,9 +31,10 @@
       </div>
     </div>
     <div class="footer">
-      <div class="button-block">
-        <i class="backButton el-icon-back" @click="backButton()"></i>
-      </div>
+      <el-button type="primary" @click="backButton">BACK</el-button>
+      <!--<div class="button-block">-->
+        <!--<i class="backButton el-icon-back" @click="backButton()"></i>-->
+      <!--</div>-->
     </div>
   </div>
 </template>
@@ -121,6 +122,12 @@ export default {
 </script>
 
 <style scoped>
+  .header {
+     margin: 0px;
+  }
+  .main {
+    top: 0px;
+  }
   .avatar {
     float: left;
     margin-left: 10px;
@@ -128,71 +135,102 @@ export default {
     margin-bottom: 10px;
   }
   .tips-block {
-    /* border: 1px solid; */
+     /*border: 1px solid;*/
     /*These two to make the tips block the same line with the clock block*/
     display: inline-block;
-    width: 100%;
+    width: 90%;
     height: 120px;
+    text-align: left;
+    margin: 10px;
+    background: rgb(230, 184, 175);
+    /*background: rgba(230, 184, 175, 0.7);*/
+    border-radius: 20px !important;
+    font-weight: bold;
   }
   .items-block {
     /* border: 1px solid; */
   }
   .food-1 {
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/cannedfood.png') no-repeat center;
   }
   .food-2 {
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/dryfood.png') no-repeat center;
   }
   .food-3 {
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/bone.png') no-repeat center;
   }
   .food-4 {
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/fish.png') no-repeat center;
   }
   .play-1 {
-    background: url('../assets/dog-play-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/frisbee.png') no-repeat center;
   }
   .play-2 {
-    background: url('../assets/dog-play-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/ball.png') no-repeat center;
   }
   .play-3 {
-    background: url('../assets/dog-play-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/bear.png') no-repeat center;
   }
   .play-4 {
-    background: url('../assets/dog-play-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/bell.png') no-repeat center;
   }
   .walk-1 {
-    background: url('../assets/dog-walk-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/street.png') no-repeat center;
   }
   .walk-2 {
-    background: url('../assets/dog-walk-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/pet_hospital.png') no-repeat center;
   }
   .walk-3 {
-    background: url('../assets/dog-walk-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/park.png') no-repeat center;
   }
   .walk-4 {
-    background: url('../assets/dog-walk-image-example.jpg') no-repeat center;
+    background: url('../assets/finalelemnet/cafe.png') no-repeat center;
   }
   .item-1 {
-    width: 50%;
-    height: 165px;
+    /*border: 1px solid;*/
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
     float: left;
+    margin-left: 25px;
+    background-color: rgba(230, 184, 175, 0.4);
   }
   .item-2 {
-    width: 50%;
-    height: 165px;
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
     float: left;
+    margin-left: 10px;
+    background-color: rgba(230, 184, 175, 0.4);
+    /*width: 50%;*/
+    /*height: 165px;*/
+    /*float: left;*/
   }
   .item-3 {
-    width: 50%;
-    height: 165px;
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
     float: left;
     clear: left;
+    margin-left: 25px;
+    margin-top: 10px;
+    background-color: rgba(230, 184, 175, 0.4);
+    /*width: 50%;*/
+    /*height: 165px;*/
+    /*float: left;*/
+    /*clear: left;*/
   }
   .item-4 {
-    width: 50%;
-    height: 165px;
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
     float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: rgba(230, 184, 175, 0.4);
+    /*width: 50%;*/
+    /*height: 165px;*/
+    /*float: left;*/
   }
   .button-block {
     /* border: 1px solid; */
@@ -205,8 +243,8 @@ export default {
     color: #E6B8AF;
     border-radius: 50%;
   }
-  .footer {
-    height:150px;
-    /*border: 1px solid;*/
-  }
+  /*.footer {*/
+    /*height:150px;*/
+    /*!*border: 1px solid;*!*/
+  /*}*/
 </style>
