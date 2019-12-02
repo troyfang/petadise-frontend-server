@@ -1,7 +1,9 @@
 <template>
   <div class="container">
-    <div class="header">Petadise</div>
+    <div class="header">Style Guide</div>
     <div class="main">
+      <h1>Our Design Patterns</h1>
+      <h4>Carousel</h4>
       <el-carousel indicator-position="outside" height="220px">
         <el-carousel-item>
           <img src="./../assets/front1.png">
@@ -13,33 +15,19 @@
           <img src="./../assets/front3.png">
         </el-carousel-item>
       </el-carousel>
-      <div class="entries-block">
-        <div class="entry-block">
-          <i class="icon el-icon-place" @click="petGameButton"></i>
-          <p class="text">Pet Game</p>
-        </div>
-        <div class="entry-block">
-          <i class="icon el-icon-location"></i>
-          <p class="text">Shelter Location</p>
-        </div>
-        <div class="entry-block">
-          <i class="icon el-icon-document"></i>
-          <p class="text">Pet Info</p>
-        </div>
-      </div>
-      <h1>
-        The Best Pet Matcher
-      </h1>
-      <p>
-        Need help with a recommendation on your best-matched pet? Our guides have got you covered. All you need to do is play a game, and you will receive our tailored match rate report for you.
-      </p>
-      <img src="./../assets/front-dog.png">
-      <h1>
-        Adoption Preparation
-      </h1>
-      <p>
-        Have no experience in raising a pet? No worries. We will get you well trained in an interesting digital game. Play fun, and learn fun.
-      </p>
+      <h4>Model Window</h4>
+      <img src="./../assets/ModelWindow.png" class="responsive">
+      <h4>Notifications</h4>
+      <img src="./../assets/notifications.png" class="responsive">
+      <h1>Our Colors</h1>
+      <img src="./../assets/Colors.png" class="responsive">
+      <h1>Our Fonts</h1>
+      <p class="header-font">The font for header is Bradley Hand, cursive</p>
+      <p>The font for paragraphs is Comic Sans MS</p>
+      <h1>Our Button</h1>
+      <el-button type="primary" size="medium" @click="generateReportButton">Button Example</el-button>
+      <br>
+      <br>
     </div>
     <div class="footer">
     </div>
@@ -81,6 +69,13 @@ export default {
 </script>
 
 <style scoped>
+  .header-font{
+      font-family: Bradley Hand, cursive;
+  }
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
   .welcome-block {
     /*border: 1px solid;*/
     /*margin-top: 50px;*/

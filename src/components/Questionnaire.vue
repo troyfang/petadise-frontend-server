@@ -91,6 +91,7 @@ export default {
     top: 0px;
     bottom: 50px;
   }
+
   .title {
     /* border: 1px solid; */
     line-height:50%;

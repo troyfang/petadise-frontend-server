@@ -9,6 +9,8 @@ import Welcome from '@/components/Welcome'
 import Login from '@/components/Login'
 import Questionnaire from '@/components/Questionnaire'
 import PetInfo from '@/components/PetInfo'
+import StyleGuide from '@/components/StyleGuide'
+
 
 Vue.use(Router)
 
@@ -57,6 +59,11 @@ export default new Router({
       path: '/PetInfo',
       name: 'PetInfo',
       component: PetInfo
+    },
+    {
+      path: '/StyleGuide',
+      name: 'StyleGuide',
+      component: StyleGuide
     },
     // {
     //   path: '/',

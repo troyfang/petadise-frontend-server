@@ -13,8 +13,8 @@ export default {
 <style>
   .container {
     position: releative;
-    /*font-family: Comic Sans MS, Comic Sans, cursive;*/
-    font-family: Jazz LET, fantasy;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
+    /* font-family: Jazz LET, fantasy; */
   }
   .header {
     font-size: 32px;
@@ -59,6 +59,7 @@ export default {
     padding: 12px 20px!important;
     background-color: #E6B8AF!important;
     color: #a43f49!important;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif !important;
     font-size: 13px!important;
     font-weight: 800!important;
     letter-spacing: 0.5px!important;
@@ -68,11 +69,12 @@ export default {
     border-radius: 20px !important;
   }
   .el-message-box {
-    /*font-family: Comic Sans MS, Comic Sans, cursive;*/
-    font-family: Jazz LET, fantasy;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
+    /* font-family: Jazz LET, fantasy; */
     margin: auto auto;
     width: 300px;
   }
+
   .h4 {
     font-size: 26px;
     font-weight: 700;
@@ -88,8 +90,8 @@ export default {
   .el-tabs__item {
     color: #E6B8AF;
   }
-  .p {
-    margin: auto;
+  p {
+    margin: 2%;
     padding: 3%;
     color: #3B5257;
   }
