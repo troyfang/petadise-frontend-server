@@ -4,7 +4,7 @@
     <div class="main">
       <div class="main-canvas">
         <div class="title">
-          <h4>Help us know more about you</h4>
+          <h4>Discover your pet preference</h4>
         </div>
         <div class="questionnaire-block">
           <p v-if="!showQuestionnaireSwitch">{{explanation}}</p>
@@ -21,8 +21,8 @@
     </div>
     <div class="footer">
       <div v-if="!showQuestionnaireSwitch">
-        <el-button type="primary" @click="quitButton">Quit</el-button>
         <el-button type="primary" @click="agreeButton">I agree, start the questionnaire</el-button>
+        <el-button type="primary" @click="quitButton">Quit</el-button>
       </div>
       <div v-if="showQuestionnaireSwitch">
         <el-button type="primary" @click="submitButton">Submit</el-button>
@@ -39,7 +39,7 @@ export default {
       username: this.$route.params.username || 'Anonymous',
       uniqueId: this.$route.params.uniqueId,
       isNewUser: this.$route.params.isNewUser,
-      explanation: 'Before the game, to give you a good experience, we want you to finish several questions to let us know more about your pet preference. Trust me, an adorable pet is worth your two minutes :)',
+      explanation: 'Before the game, to give you a good experience, we want you to finish several questions to let us know more about your pet preference. We will try our best to match the best pet candidates for you :)',
       showQuestionnaireSwitch: false,
       questionnaire: null,
       answer: {},
@@ -82,9 +82,6 @@ export default {
 </script>
 
 <style scoped>
-  .footer {
-    height: 100px;
-  }
   .main-canvas {
     /*border: 1px solid;*/
     background-color: white;
@@ -100,12 +97,13 @@ export default {
   }
   .questionnaire-block {
     /*border: 1px solid;*/
+    font-size: 20px;
     margin-left: 10px;
     margin-right: 10px;
     text-align: left;
   }
   .checkbox {
     display: inline-grid;
-    width: 80px;
+    width: 100px;
   }
 </style>

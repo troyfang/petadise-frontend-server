@@ -1,13 +1,13 @@
 <template>
   <div class="container">
-    <div class="header">Pet Information</div>
+    <div class="header">{{petName}}</div>
     <div class="main">
-      <div class="picture-out">
-        <div class="picture-in"></div>
-      </div>
-      <div class="pet-name">
-        <p>{{petName}}</p>
-      </div>
+      <!--<div class="picture-out">-->
+        <!--<div class="picture-in"></div>-->
+      <!--</div>-->
+      <!--<div class="pet-name">-->
+        <!--<p>{{petName}}</p>-->
+      <!--</div>-->
       <div class="info">
         <p>{{description}}</p>
       </div>
@@ -15,9 +15,10 @@
       </div>
     </div>
     <div class="footer">
-      <div class="button-block">
-        <i class="backButton el-icon-back" @click="backButton()"></i>
-      </div>
+      <el-button type="primary" @click="backButton">BACK</el-button>
+      <!--<div class="button-block">-->
+        <!--<i class="backButton el-icon-back" @click="backButton()"></i>-->
+      <!--</div>-->
     </div>
   </div>
 </template>
@@ -48,29 +49,31 @@ export default {
 </script>
 
 <style scoped>
-  .picture-out {
-    /*height: 150px;*/
-    border: 1px solid;
-  }
-  .picture-in {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    border: 1px solid;
-    margin: 0 auto;
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
+  /*.picture-out {*/
+    /*!*height: 150px;*!*/
+    /*border: 1px solid;*/
+  /*}*/
+  /*.picture-in {*/
+    /*height: 100px;*/
+    /*width: 100px;*/
+    /*border-radius: 50%;*/
+    /*border: 1px solid;*/
+    /*margin: 0 auto;*/
+    /*background: url('../assets/dog-food-image-example.jpg') no-repeat center;*/
 
-  }
-  .pet-name {
-    border: 1px solid;
-  }
+  /*}*/
+  /*.pet-name {*/
+    /*!*border: 1px solid;*!*/
+  /*}*/
   .info {
-    border: 1px solid;
+    height: auto;
+    /*border: 1px solid;*/
   }
   .location {
-    border: 1px solid;
-    height: 400px;
-    width: 100%;
+    /*border: 1px solid;*/
+    height: 300px;
+    width: 90%;
+    margin: 20px;
     background: url('../assets/location.png') no-repeat center;
   }
   .button-block {
@@ -83,7 +86,7 @@ export default {
     color: white;
     border-radius: 50%;
   }
-  .footer {
-    height: 100px;
-  }
+  /*.footer {*/
+    /*height: 100px;*/
+  /*}*/
 </style>
