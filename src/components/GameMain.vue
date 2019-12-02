@@ -153,7 +153,7 @@ export default {
   },
   mounted: function () {
     this.petName = this.petNames[this.petIndex]
-    this.tips = this.$route.params.reason || '当呼吸灯闪烁时，说明' + this.petName + '需要你的帮助啦！'
+    this.tips = this.$route.params.reason || 'When the light is on, it means that ' + this.petName + ' need attention from you!'
     // this.$socket.emit('prepare_tasks', {uniqueId: this.uniqueId, petName: this.petName})
     // this.axios.get('/unique-id')
     //   .then(res => {
