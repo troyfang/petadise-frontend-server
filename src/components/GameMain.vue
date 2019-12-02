@@ -2,7 +2,15 @@
   <div class="container">
     <div class="header">PETADISE</div>
     <div class="main">
-      <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
+      <img src="../assets/img_avatar.png" class="profile-image" alt="Avatar">
+      <a href="#" @click="quitButton">Back to Home</a>
+      <a style="color:#434343">Logout</a>
+      <a href="#" @click="about">About</a>
+    </div>
+      <div class="nav-open-game" @click="openNav">&#9776;</div>
+      <el-tabs v-model="activeName" type="card" style="margin-left:60px" @tab-click="handleClick">
         <el-tab-pane :label="petNames[0] + '\(' + this.taskBacklogCounter[petNames[0]].total + '\)'" name="0"/>
         <el-tab-pane :label="petNames[1] + '\(' + this.taskBacklogCounter[petNames[1]].total + '\)'" name="1" v-if="petNames.length > 1"/>
         <el-tab-pane :label="petNames[2] + '\(' + this.taskBacklogCounter[petNames[2]].feed + '\)'" name="2" v-if="petNames.length > 2"/>
@@ -150,6 +158,18 @@ export default {
       localStorage.setItem('taskBacklogCounter', JSON.stringify(this.taskBacklogCounter))
       localStorage.setItem('latestTaskUniqueId', JSON.stringify(this.latestTaskUniqueId))
       localStorage.setItem('happinessValue', JSON.stringify(this.happinessValue))
+    },
+    quitButton: function () {
+      this.$router.replace({name: 'Welcome', params: {username: this.username, uniqueId: this.uniqueId, isNewUser: this.isNewUser}});
+    },
+    openNav: function() {
+      document.getElementById("mySidenav").style.width = "200px";
+    },
+    closeNav: function() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+    about: function() {
+      window.location.href = "https://mailchi.mp/a38976523c45/petadise"
     }
     // timeDown () {
     //   let limitTime = this.limitTime

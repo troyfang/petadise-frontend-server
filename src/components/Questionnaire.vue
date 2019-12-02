@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    <div class="header">Questionnare</div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
+      <img src="../assets/img_avatar.png" class="profile-image" alt="Avatar">
+      <a href="#" @click="quitButton">Back to Home</a>
+      <a style="color:#434343">Logout</a>
+      <a href="#" @click="about">About</a>
+    </div>
+    <div class="header">
+      <div class="nav-open" @click="openNav">&#9776;</div>
+      Questionnare
+    </div>
     <div class="main">
       <div class="main-canvas">
         <div class="title">
@@ -12,7 +22,7 @@
             <div v-for="(value, key) in questionnaire">
               <p>{{value.question}}</p>
               <el-checkbox-group v-model="answer[key]" v-for="(item, _) in value.choices" class="checkbox">
-                <el-checkbox :label="item"></el-checkbox>
+                <el-checkbox :label="item" :checked=true></el-checkbox>
               </el-checkbox-group>
             </div>
           </div>
@@ -76,6 +86,15 @@ export default {
         }).catch(err => {
           console.log(err)
         })
+    },
+    openNav: function() {
+      document.getElementById("mySidenav").style.width = "200px";
+    },
+    closeNav: function() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+    about: function() {
+      window.location.href = "https://mailchi.mp/a38976523c45/petadise"
     }
   }
 }

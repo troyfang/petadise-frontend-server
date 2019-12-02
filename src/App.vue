@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
-}
+  name: "App"
+};
 </script>
 
 <style>
@@ -31,6 +31,74 @@ export default {
     top: 0;
     /*border: 1px solid;*/
   }
+
+  .nav-open {
+  float: left;
+  padding-left: 15px;
+  text-align: left;
+  cursor: pointer;
+}
+.nav-open-game {
+  position:absolute;
+  z-index:100;
+  font-size: 28px;
+  font-weight: 700;
+  color: #e6b8af;
+  font-family: Bradley Hand, cursive;
+  background-color: #fff;
+  text-align: center;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  background-color: #A43F49;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  text-align: center;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.profile-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 40%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
   .main {
     background-color: white;
     color: #333;
