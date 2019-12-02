@@ -80,14 +80,21 @@ export default {
       petIndex: this.$route.params.petIndex,
       activeName: this.$route.params.petIndex.toString(),
       mood: this.$route.params.mood || 'normal',
-      virtualTime: '10:00:00',
       uniqueId: this.$route.params.uniqueId,
+      virtualTime: '10:00:00',
       petNames: JSON.parse(localStorage.getItem('petNames')),
       happinessValue: JSON.parse(localStorage.getItem('happinessValue')),
       taskBacklogCounter: JSON.parse(localStorage.getItem('taskBacklogCounter')),
       latestTaskUniqueId: JSON.parse(localStorage.getItem('latestTaskUniqueId')),
       petName: '',
-      tips: ''
+      tips: '',
+      gameTips: [
+        'When the light is on, it means that this pet needs attention from you!',
+        'Response to pets\' need in-time to earn more happiness bonus!',
+        'Choose the most suitable items for your pets to earn more happiness bonus:)',
+        'Even though your pets are not in need, you can still interact with them!',
+        'Use the top tags to switch between your pets'
+      ]
     }
   },
   methods: {
@@ -153,7 +160,8 @@ export default {
   },
   mounted: function () {
     this.petName = this.petNames[this.petIndex]
-    this.tips = this.$route.params.reason || 'When the light is on, it means that ' + this.petName + ' need attention from you!'
+    // const randomIndex = Math.floor(Math.random() * (this.gameTips.length + 1))
+    this.tips = this.$route.params.reason || this.gameTips[0]
     // this.$socket.emit('prepare_tasks', {uniqueId: this.uniqueId, petName: this.petName})
     // this.axios.get('/unique-id')
     //   .then(res => {
@@ -184,7 +192,7 @@ export default {
   }
   .main-canvas {
     /*border: 1px solid;*/
-    background: url('../assets/home-inside-example-2.png') no-repeat;
+    background: url('../assets/home-inside-example-3.png') no-repeat;
     position: absolute;
     left: 0px;
     right: 0px;
