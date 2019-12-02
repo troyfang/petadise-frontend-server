@@ -10,7 +10,8 @@ import Login from '@/components/Login'
 import Questionnaire from '@/components/Questionnaire'
 import PetInfo from '@/components/PetInfo'
 import StyleGuide from '@/components/StyleGuide'
-
+import PetArchive from '@/components/PetArchive'
+import ShelterLocation from '@/components/ShelterLocation'
 
 Vue.use(Router)
 
@@ -65,6 +66,16 @@ export default new Router({
       name: 'StyleGuide',
       component: StyleGuide
     },
+    {
+      path: '/PetArchive',
+      name: 'PetArchive',
+      component: PetArchive
+    },
+    {
+      path: '/ShelterLocation',
+      name: 'ShelterLocation',
+      component: ShelterLocation
+    }
     // {
     //   path: '/',
     //   name: 'Login',
