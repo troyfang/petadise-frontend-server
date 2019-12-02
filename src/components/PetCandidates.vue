@@ -2,18 +2,20 @@
   <div class="container">
     <div class="header">Recommendation</div>
     <div class="main">
-      <div class="intro-block" v-for="item in petCandidates">
-        <div class="picture-out">
-          <div class="picture-in Frankie-icon" v-if="item.petName === 'Frankie'"></div>
-          <div class="picture-in Mikky-icon" v-if="item.petName === 'Mikky'"></div>
-          <div class="picture-in Cooper-icon" v-if="item.petName === 'Cooper'"></div>
-          <div class="picture-in Max-icon" v-if="item.petName === 'Max'"></div>
-        </div>
-        <div class="name">
-          <h4 class="text">{{item.petName}}</h4>
-        </div>
-        <div class="intro">
-          <p>{{item.intro}}</p>
+      <div class="main-canvas">
+        <div class="intro-block" v-for="item in petCandidates">
+          <div class="picture-out">
+            <div class="picture-in Frankie-icon" v-if="item.petName === 'Frankie'"></div>
+            <div class="picture-in Mikky-icon" v-if="item.petName === 'Mikky'"></div>
+            <div class="picture-in Cooper-icon" v-if="item.petName === 'Cooper'"></div>
+            <div class="picture-in Max-icon" v-if="item.petName === 'Max'"></div>
+          </div>
+          <div class="name">
+            <h4 class="text">{{item.petName}}</h4>
+          </div>
+          <div class="intro">
+            <p>{{item.intro}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -51,6 +53,10 @@ export default {
 </script>
 
 <style scoped>
+  .main-canvas {
+    overflow-y: auto;
+    height: 430px;
+  }
   .intro-block {
     /*border: 1px solid;*/
     height: 150px;
