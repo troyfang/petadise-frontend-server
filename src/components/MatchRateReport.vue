@@ -16,7 +16,10 @@
           </div>
         </div>
         <div class="picture-out">
-          <div class="picture-in"></div>
+          <div class="picture-in Frankie-icon" v-if="petName === 'Frankie'"></div>
+          <div class="picture-in Mikky-icon" v-if="petName === 'Mikky'"></div>
+          <div class="picture-in Cooper-icon" v-if="petName === 'Cooper'"></div>
+          <div class="picture-in Max-icon" v-if="petName === 'Max'"></div>
         </div>
         <div class="pet-name">
           <p class="pet-name-text">{{petName}}</p>
@@ -47,8 +50,8 @@ export default {
     return {
       description_line1: 'The match rate is calculated based on your timely response to pets\' needs, the food/toys/walking places you choose, and your active interaction times with pets. The idea is to imitate your living habits, behaviour patterns and pets\' daily routines.',
       description_line2: 'The higher the rate is, the more likely the pet is to be your best partner.',
-      // report: this.$route.params.report,
-      report: {'Frankie': 4, 'Mikky': 3.8, 'lsl': 2, 'sdfs': 3},
+      report: this.$route.params.report,
+      // report: {'Frankie': 4, 'Mikky': 3.8, 'Cooper': 2, 'Max': 3},
     }
   },
   methods: {
@@ -90,8 +93,19 @@ export default {
     width: 65px;
     border-radius: 50%;
     /*border: 1px solid;*/
-    background: url('../assets/dog-food-image-example.jpg') no-repeat center;
-
+    /*background: url('../assets/dog-food-image-example.jpg') no-repeat center;*/
+  }
+  .Frankie-icon {
+    background: url('../assets/finalelemnet/frankie_icon.png') no-repeat center;
+  }
+  .Mikky-icon {
+    background: url('../assets/finalelemnet/mikky_icon.png') no-repeat center;
+  }
+  .Cooper-icon {
+    background: url('../assets/finalelemnet/cooper_icon.png') no-repeat center;
+  }
+  .Max-icon {
+    background: url('../assets/finalelemnet/max_icon.png') no-repeat center;
   }
   .pet-name {
     /*border: 1px solid;*/
