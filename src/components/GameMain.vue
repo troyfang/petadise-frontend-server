@@ -118,7 +118,7 @@ export default {
           this.$confirm(res.data.suggestion, 'Suggestion', {
             confirmButtonText: 'Yes',
             cancelButtonText: 'Keep playing',
-            type: 'warning'
+            // type: 'warning'
           }).then(() => {
             this.generateReport().then(res2 => {
               this.beforeLeave()
