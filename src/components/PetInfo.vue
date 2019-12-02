@@ -1,6 +1,16 @@
 <template>
   <div class="container">
-    <div class="header">{{petName}}</div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" @click="closeNav">&times;</a>
+      <img src="../assets/img_avatar.png" class="profile-image" alt="Avatar">
+      <a href="#" @click="quitButton">Back to Home</a>
+      <a style="color:#434343">Logout</a>
+      <a href="#" @click="about">About</a>
+    </div>
+    <div class="header">
+      <div class="nav-open" @click="openNav">&#9776;</div>
+      {{petName}}
+    </div>
     <div class="main">
       <!--<div class="picture-out">-->
         <!--<div class="picture-in"></div>-->
@@ -35,6 +45,18 @@ export default {
   methods: {
     backButton: function() {
       this.$router.replace({name: 'MatchRateReport', params: {report: this.report}})
+    },
+    quitButton: function () {
+      this.$router.replace({name: 'Welcome', params: {username: this.username, uniqueId: this.uniqueId, isNewUser: this.isNewUser}});
+    },
+    openNav: function() {
+      document.getElementById("mySidenav").style.width = "200px";
+    },
+    closeNav: function() {
+      document.getElementById("mySidenav").style.width = "0";
+    },
+    about: function() {
+      window.location.href = "https://mailchi.mp/a38976523c45/petadise"
     }
   },
   mounted () {
