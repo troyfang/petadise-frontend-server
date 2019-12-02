@@ -19,12 +19,12 @@
           <p class="text">Pet Game</p>
         </div>
         <div class="entry-block">
-          <i class="icon el-icon-location"></i>
+          <i class="icon el-icon-location" @click="shelterLocationButton"></i>
           <p class="text">Shelter Location</p>
         </div>
         <div class="entry-block">
-          <i class="icon el-icon-document"></i>
-          <p class="text">Pet Info</p>
+          <i class="icon el-icon-document" @click="petArchiveButton"></i>
+          <p class="text">Pet Archive</p>
         </div>
       </div>
       <h1>
@@ -67,6 +67,12 @@ export default {
       } else {
         this.$router.replace({name: 'GameMain', params: {petIndex: 0, uniqueId: this.uniqueId}})
       }
+    },
+    petArchiveButton: function () {
+      this.$router.replace({name: 'PetArchive'})
+    },
+    shelterLocationButton: function () {
+      this.$router.replace({name: 'ShelterLocation'})
     }
   },
   mounted: function () {
