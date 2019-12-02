@@ -72,7 +72,7 @@ export default {
     font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", sans-serif;
     /* font-family: Jazz LET, fantasy; */
     margin: auto auto;
-    width: 300px;
+    width: 300px !important;
   }
 
   .h4 {
@@ -82,13 +82,13 @@ export default {
     letter-spacing: 0.25px;
   }
   .el-progress-bar__inner{
-    background-color: #E6B8AF;
+    background-color: #E6B8AF!important;
   }
   .el-tabs__item.is-active {
-    color: #a43f49;
+    color: #a43f49 !important;
   }
   .el-tabs__item {
-    color: #E6B8AF;
+    color: #E6B8AF !important;
   }
   p {
     margin: 2%;
