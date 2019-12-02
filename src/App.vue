@@ -13,7 +13,8 @@ export default {
 <style>
   .container {
     position: releative;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    /*font-family: Comic Sans MS, Comic Sans, cursive;*/
+    font-family: Jazz LET, fantasy;
   }
   .header {
     font-size: 32px;
@@ -67,7 +68,8 @@ export default {
     border-radius: 20px !important;
   }
   .el-message-box {
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    /*font-family: Comic Sans MS, Comic Sans, cursive;*/
+    font-family: Jazz LET, fantasy;
     margin: auto auto;
     width: 300px;
   }
