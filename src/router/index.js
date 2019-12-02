@@ -58,6 +58,7 @@ export default new Router({
       name: 'PetInfo',
       component: PetInfo
     },
+
     // {
     //   path: '/',
     //   name: 'Login',

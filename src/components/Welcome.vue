@@ -2,10 +2,17 @@
   <div class="container">
     <div class="header">Petadise</div>
     <div class="main">
-      <div class="welcome-block">
-        <!--<p>{{username}}, Welcome to Petadice</p>-->
-        <p>Welcome to Petadice</p>
-      </div>
+      <el-carousel indicator-position="outside" height="220px">
+        <el-carousel-item>
+          <img src="./../assets/front1.png">
+        </el-carousel-item>
+        <el-carousel-item>
+          <img src="./../assets/front2.png">
+        </el-carousel-item>
+        <el-carousel-item>
+          <img src="./../assets/front3.png">
+        </el-carousel-item>
+      </el-carousel>
       <div class="entries-block">
         <div class="entry-block">
           <i class="icon el-icon-place" @click="petGameButton"></i>
@@ -20,12 +27,19 @@
           <p class="text">Pet Info</p>
         </div>
       </div>
-      <div class="entries-block">
-        <div class="entry-block">
-          <i class="icon el-icon-more"></i>
-          <p class="text">Other</p>
-        </div>
-      </div>
+      <h4>
+        The Best Pet Matcher
+      </h4>
+      <p>
+        Need help with a recommendation on your best-matched pet? Our guides have got you covered. All you need to do is play a game, and you will receive our tailored match rate report for you.
+      </p>
+      <img src="./../assets/front-dog.png">
+      <h4>
+        Adoption Preparation
+      </h4>
+      <p>
+        Have no experience in raising a pet? No worries. We will get you well trained in an interesting digital game. Play fun, and learn fun.
+      </p>
     </div>
     <div class="footer">
     </div>
@@ -89,6 +103,27 @@ export default {
   .entry-block {
     /*border: 1px solid;*/
     flex: 1;
+  }
+
+  /* .el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 500px;
+    margin: 0;
+  } */
+
+  .el-carousel__item:nth-child() {
+    background-color: #99a9bf;
+    height: 100%;
+  }
+
+  /* .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+    height: 100%;
+  } */
+  .el-carousel {
+    height: 250px;
   }
   /*.footer {*/
     /*background-color: #B3C0D1;*/
