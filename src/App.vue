@@ -74,6 +74,7 @@ export default {
     margin: auto auto;
     width: 300px;
   }
+
   .h4 {
     font-size: 26px;
     font-weight: 700;
